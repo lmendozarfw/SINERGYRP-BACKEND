@@ -1,0 +1,6 @@
+@SinergyRP.Api_HostAddress = http://localhost:5062
+
+GET {{SinergyRP.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

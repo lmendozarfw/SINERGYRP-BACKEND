@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SinergyRP.Api/SinergyRP.Api.csproj" />
+    <Project Path="src/SinergyRP.Application/SinergyRP.Application.csproj" />
+    <Project Path="src/SinergyRP.Domain/SinergyRP.Domain.csproj" />
+    <Project Path="src/SinergyRP.Infrastructure/SinergyRP.Infrastructure.csproj" />
+  </Folder>
+</Solution>
