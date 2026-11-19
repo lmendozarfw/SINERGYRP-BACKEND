@@ -8,7 +8,7 @@ public class UsuarioOrganizacionPermisoConfiguracion : IEntityTypeConfiguration<
 {
     public void Configure(EntityTypeBuilder<UsuarioOrganizacionPermiso> builder)
     {
-        builder.ToTable("UsuariosOrganizacionesPermisos");
+        builder.ToTable("usuarios_organizaciones_permisos");
 
         builder.HasKey(x => new { x.UsuarioOrganizacionId, x.PermisoId });
 

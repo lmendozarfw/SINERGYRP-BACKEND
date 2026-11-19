@@ -8,7 +8,7 @@ public class UsuarioOrganizacionConfiguracion : IEntityTypeConfiguration<Usuario
 {
     public void Configure(EntityTypeBuilder<UsuarioOrganizacion> builder)
     {
-        builder.ToTable("UsuariosOrganizaciones");
+        builder.ToTable("usuarios_organizaciones");
 
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id).ValueGeneratedOnAdd();

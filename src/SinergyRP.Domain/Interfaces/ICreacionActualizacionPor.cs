@@ -1,5 +1,5 @@
 public interface ICreacionActualizacionPor
 {
-    string? CreadoPor {get;}
-    string? ActualizadoPor {get;}
+    int? CreadoPorId {get;}
+    int? ActualizadoPorId {get;}
 }

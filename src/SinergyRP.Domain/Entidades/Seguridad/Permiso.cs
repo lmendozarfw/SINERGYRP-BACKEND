@@ -12,16 +12,16 @@ public class Permiso : EntidadBase, ICreacionActualizacion, ICreacionActualizaci
     public bool Activo {get; private set;}
     public DateTime FechaCreacion {get; private set;}
     public DateTime? FechaActualizacion {get; private set;}
-    public string? CreadoPor {get; private set;}
-    public string? ActualizadoPor {get; private set;}
+    public int? CreadoPorId {get; private set;}
+    public int? ActualizadoPorId {get; private set;}
 
-    public Permiso(string codigo, string modulo, string nombre, string? descripcion, string? creadoPor)
+    public Permiso(string codigo, string modulo, string nombre, string? descripcion, int? creadoPorId)
     {
         Codigo = GuardiaDominio.NoEsNullOVacio(codigo, nameof(codigo));
         Modulo = GuardiaDominio.NoEsNullOVacio(modulo, nameof(modulo));
         Nombre = GuardiaDominio.NoEsNullOVacio(nombre, nameof(nombre));
         Descripcion = GuardiaDominio.NormalizarString(descripcion, nameof(descripcion));
-        CreadoPor = GuardiaDominio.NormalizarString(creadoPor, nameof(creadoPor));
+        CreadoPorId = GuardiaDominio.IdNumerico(creadoPorId, nameof(creadoPorId));
         Activo = true;
         FechaCreacion = DateTime.UtcNow;
     }

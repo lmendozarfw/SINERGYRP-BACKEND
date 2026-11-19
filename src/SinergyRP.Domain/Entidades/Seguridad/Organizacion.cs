@@ -11,14 +11,14 @@ public class Organizacion : EntidadBase, IEliminacionLogica, ICreacionActualizac
     public DateTime? FechaEliminacion {get; private set;}
     public DateTime FechaCreacion {get; private set;}
     public DateTime? FechaActualizacion {get; private set;}
-    public string? CreadoPor {get; private set;}
-    public string? ActualizadoPor {get; private set;}
+    public int? CreadoPorId {get; private set;}
+    public int? ActualizadoPorId {get; private set;}
 
-    public Organizacion(string codigo, string nombre, string? creadoPor)
+    public Organizacion(string codigo, string nombre, int? creadoPorId)
     {
         Codigo = GuardiaDominio.NoEsNullOVacio(codigo, nameof(codigo));
         Nombre = GuardiaDominio.NoEsNullOVacio(nombre, nameof(nombre));
-        CreadoPor = GuardiaDominio.NormalizarString(creadoPor, nameof(creadoPor));
+        CreadoPorId = GuardiaDominio.IdNumerico(creadoPorId, nameof(creadoPorId));
         Activo = true;
         FechaCreacion = DateTime.UtcNow;
     }

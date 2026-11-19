@@ -63,6 +63,19 @@ public static class GuardiaDominio
         return valor;
     }
 
+    public static int? IdNumerico(int? valor, string nombreParametro)
+    {
+        if (valor is null)
+        {
+            return null;
+        }
+        if (valor < 0)
+        {
+            throw new ArgumentException($"La propiedad {nombreParametro} debe ser un identificador válido.", nombreParametro);
+        }
+        return valor;
+    }
+
     public static TEnum EstaEnEnum<TEnum>(TEnum valor, string nombreParametro) where TEnum : struct, Enum
     {
         var isValid = Enum.IsDefined(typeof(TEnum), valor);
